@@ -1,0 +1,3 @@
+### One option for reducing copy-and-paste (the case when dealing with ,ultiple modules and to make sure the backend is not messed up) is to use partial configurations, where you omit certain parameters from the backend configuration in your Terraform code and instead pass those in via -backend-config command-line arguments when calling terraform init.
+
+```$ terraform init -backend-config=backend.hcl```
