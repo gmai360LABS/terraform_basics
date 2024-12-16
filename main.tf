@@ -1,19 +1,7 @@
-provider "aws" {
-  region = "us-east-2"
-}
 
-# Data sources
 
-data "aws_vpc" "default" {
-  default = true
-}
 
-data "aws_subnets" "default" {
-  filter {
-    name = "vpc-id"
-    values = [data.aws_vpc.default.id]
-  }
-}
+# Creation of launch template
 
 resource "aws_launch_template" "example" {
   name          = "example-launch-template"
